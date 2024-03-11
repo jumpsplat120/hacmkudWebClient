@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" type="text/css" href="webapp.css">
+        <link rel="stylesheet" type="text/css" href="colors.css">
+        <script src="init.js"></script>
+        <script src="functions.js"></script>
+    </head>
+    <body>
+        <div id="noise_filter">
+			<div id="click" class="color_b">click</div>
+			<button id="options_dropdown">\/</button>
+			<div id="options_container"></div>
+			<div class="color_bb" id="splash_screen_container">
+				<audio id="startup_sound">
+					<source src="assets/hm_startup.wav" type="audio/wav"></source>
+					<source src="assets/hm_startup.mp3" type="audio/mp3"></source>
+				</audio>
+				<p id="splash_log">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</p>
+				<div class="title_container color_ss" id="splash_title_container">
+					<div id="title_video_left" class="title_video invisible">
+						<video class="left" autoplay muted loop src="assets/logo.webm#t=1.25"></video>
+					</div>
+					<div id="animated_title">
+							<h1 id="title_hack" class="title">
+							</h1>
+							<h1 id="title_mud" class="title">
+							</h1>
+					</div>
+					<div id="title_video_right" class="title_video invisible">
+						<video class="right" autoplay muted loop src="assets/logo.webm"></video>
+					</div>
+                </div>
+			</div>
+            <div class=" color_ss invisible no_display" id="login_container">
+                <div class="title_container" id="login_title_container">
+					<div class="title_element">
+						<video class="left" autoplay muted loop src="assets/logo.webm#t=1.25"></video>
+					</div>
+					<div class="title_element">
+						<h1>
+              ◢██◤                            ◢██◤<br>
+             ◢██◤                            ◢██◤<br>
+            ◢██◤                            ◢██◤<br>
+           ◢██◤                            ◢██◤<br>
+          ◢██◤                            ◢██◤<br>
+         ◢██◤                            ◢██◤<br>
+        ◢█████◣    ◢████████◤ ◢███████◤ ◢██◤ ◢██◤                 ◢██◤<br>
+       ◢███████◣        ◢██◤ ◢██◤ ◢██◤ ◢███████◤                 ◢██◤<br>
+      ◢██◤  ◢██◤ ◢████████◤ ◢██◤      ◢█████◣                   ◢██◤<br>
+     ◢██◤  ◢██◤ ◢██◤  ███◤ ◢██◤ ◢██◤ ◢██◤◥███◣                 ◢██◤<br>
+    ◢██◤  ◢██◤ ◢████████◤ ◢███████◤ ◢██◤  ◥███◣               ◢██◤<br>
+                                                             ◢██◤<br>
+                              ◢███◤ ◢███◤ ◢██◤  ◢██◤ ◢█████████◤<br>
+                             ◢█████████◤ ◢██◤  ◢██◤ ◢██◤  ████◤<br>
+                            ◢██◤◢█◤◢██◤ ◢██◤  ◢██◤ ◢██◤   ███◤<br>
+                           ◢██◤   ◢██◤ ◢████████◤ ◢█████████◤<br>
+                          ◢██◤   ◢██◤ ◢████████◤ ◢█████████◤<br>
+						</h1>
+						<p class="color_b subtitle">webclient v1.0</p>
+					</div>
+					<div class="title_element">
+						<video class="right" autoplay muted loop src="assets/logo.webm"></video>
+					</div>
+                </div>
+                <div class="cssload-square invisible no_display" id="loading_animation">
+                    <div class="cssload-square-part cssload-square-green"></div>
+                    <div class="cssload-square-part cssload-square-pink"></div>
+                    <div class="cssload-square-blend"></div>
+                </div>
+                <div class="" id="chat_pass_container">
+                    <span class="input_delimiter color_bb">:</span><input type="text" id="chat_pass_input" maxlength=6 autofocus=true onkeydown="submit_pass()" placeholder="input your chat_pass retrieved from ingame">
+                </div>
+            </div>
+            <div class=" invisible no_display color_ss" id="main_container">
+                <div id="tab_container">
+                    <button id="default_tab" onclick="tabClick(this)">Default Tab</button>
+                    <button id="tab_addition" onclick="newTab()">+</button>
+                </div>
+                <div class="color_ss" id="chats_container">
+                    <div id="default_chat" class="chat"></div>
+                </div>
+                <div id="controls_container color_ss" class="float_left">
+					<div id="username_filter_container">
+						<p>name1</p>
+						<p>name2</p>
+						<button id="username_blacklist"></button>
+						<button id="username_whitelist"></button>
+						<button id="username_off"></button>
+					</div>
+					<div id="channel_filter_container">
+						<p>name1</p>
+						<p>name2</p>
+						<button id="channel_blacklist"></button>
+						<button id="channel_whitelist"></button>
+						<button id="channel_off"></button>
+
+					</div>
+					<div id="script_buttons_container">
+					</div>
+				</div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <script src="events.js"></script>
+        <script src="main.js"></script>
+    </footer>
+</html>
